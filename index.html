@@ -26,13 +26,19 @@
   <body>
     <header></header>
     <main class="main">
-      <!-- search container -->
-      <div class="w-50 mx-auto d-flex mt-4">
-        <input id="input-field" class="search-field form-control" type="text" />
+      <!-- Search field -->
+      <div class="input-group mb-3 w-50 mx-auto mt-4">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Recipient's username"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+        />
         <button
+          id="search-button"
+          class="btn"
           type="button"
-          class="btn btn-success"
-          id="search-btn"
           onclick="loadProducts()"
         >
           Search
@@ -40,19 +46,13 @@
       </div>
 
       <div class="row">
-        <div class="col-md-9 col-lg-9 col-sm-7">
-          <!-- single product details -->
-          <div id="single-product" class="col-6 mx-auto mt-3"></div>
-
-          <!-- All product -->
+        <!-- product section  -->
+        <div class="col-md-9 col-lg-9 col-sm-7 gx-3">
           <div id="all-products" class=""></div>
         </div>
 
+        <!-- cart section-->
         <div class="col-md-3 col-lg-3 col-sm-5 cart-main mt-5 mr-1">
-          <!-- single product details  -->
-          <div class="col-12"></div>
-
-          <!-- cart -->
           <div class="col-12">
             <div class="cart" id="my-cart">
               <table class="table">
@@ -98,7 +98,9 @@
                 </tbody>
               </table>
               <div class="parces text-center">
-                <button class="btn btn-danger text-center">Buy Now</button>
+                <button id="buy-now-btn" class="btn text-center">
+                  Buy Now
+                </button>
               </div>
             </div>
           </div>
